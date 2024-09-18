@@ -32,10 +32,10 @@ return {
 
     require('neo-tree').setup {
       source_selector = {
-        winbar = false,
-        statusline = false,
+        winbar = true,
+        statusline = true,
       },
-      close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
+      close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
       popup_border_style = 'rounded',
       enable_git_status = true,
       enable_diagnostics = true,
@@ -195,6 +195,7 @@ return {
           ['<'] = 'prev_source',
           ['>'] = 'next_source',
           ['i'] = 'show_file_details',
+          ['\\'] = 'close_window',
         },
       },
       nesting_rules = {},
@@ -296,8 +297,8 @@ return {
         },
       },
       git_status = {
+        position = 'float',
         window = {
-          position = 'float',
           mappings = {
             ['A'] = 'git_add_all',
             ['gu'] = 'git_unstage_file',
