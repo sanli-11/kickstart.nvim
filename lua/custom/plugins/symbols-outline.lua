@@ -63,4 +63,7 @@ return {
       Fragment = { icon = '', hl = '@constant' },
     },
   },
+  config = function()
+    vim.keymap.set('n', '<C-\\>', '<Cmd>SmybolsOutline<CR>')
+  end,
 }

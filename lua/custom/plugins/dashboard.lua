@@ -4,7 +4,7 @@ return {
   dependencies = {
     { 'juansalvatore/git-dashboard-nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
   },
-  opts = function()
+  config = function()
     local git_dashboard = require('git-dashboard-nvim').setup {}
 
     local opts = {
