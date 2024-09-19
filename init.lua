@@ -29,6 +29,8 @@ vim.opt.wrap = false
 
 -- Show both line number and relative line number
 
+-- Show gutter at right for 80 characters
+
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
