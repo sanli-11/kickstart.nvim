@@ -27,9 +27,6 @@ vim.opt.autoindent = true -- copy indent from current line when starting new one
 -- line wrapping
 vim.opt.wrap = false
 
--- Show both line number and relative line number
-vim.o.statuscolumn = '%s %l %r'
-
 -- Enable mouse mode, can be useful for resizing splits for example!
 vim.opt.mouse = 'a'
 
