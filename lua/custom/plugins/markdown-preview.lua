@@ -7,7 +7,7 @@ return {
   end,
   ft = 'markdown',
   config = function()
-    vim.keymap.set('n', '<leader>m', function()
+    vim.keymap.set('n', '<leader>tmp', function()
       if vim.bo.filetype == 'markdown' then
         vim.cmd 'MarkdownPreviewToggle'
       else

@@ -1,27 +1,23 @@
 return {
-  'nvimdev/dashboard-nvim',
+  'MeanderingProgrammer/dashboard.nvim',
   event = 'VimEnter',
-  dependencies = {
-    { 'juansalvatore/git-dashboard-nvim', dependencies = { 'nvim-lua/plenary.nvim' } },
-  },
   config = function()
-    local git_dashboard = require('git-dashboard-nvim').setup {}
-
-    local opts = {
-      theme = 'doom',
-      config = {
-        header = git_dashboard,
-        center = {
-          { action = '', desc = '', icon = '', key = 'n' },
-        },
-        footer = function()
-          return {}
-        end,
+    require('dashboard').setup {
+      header = {}, -- Dashboard header
+      date_format = nil, -- Format to display date in
+      directories = {}, -- List of directory paths, or functions that return paths
+      -- Sections to add at bottom, these can be string references to
+      -- functions in sections.lua, custom strings, or custom functions
+      footer = {},
+      -- Gets called after directory is changed and is provided with the
+      -- directory path as an argument
+      on_load = function() end,
+      highlight_groups = { -- Highlight groups to use for various components
+        header = 'Constant',
+        icon = 'Type',
+        directory = 'Delimiter',
+        hotkey = 'Statement',
       },
     }
-
-    -- extra dashboard nvim config ...
-
-    return opts
   end,
 }

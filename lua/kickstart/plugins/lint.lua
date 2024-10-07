@@ -6,6 +6,10 @@ return {
     config = function()
       local lint = require 'lint'
       lint.linters_by_ft = {
+        go = { 'golangcilint' },
+        html = { 'htmlhint', 'tidy' },
+        javascript = { 'eslint_d', 'eslint' },
+        json = { 'jsonlint' },
         markdown = { 'markdownlint' },
       }
 
