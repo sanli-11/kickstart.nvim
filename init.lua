@@ -137,7 +137,6 @@ require('lazy').setup({
   require 'kickstart.plugins.cmp',
   require 'kickstart.plugins.conform',
   require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.dracula',
   require 'kickstart.plugins.gitsigns', -- adds gitsigns recommend keymaps
   require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lazydev',
@@ -148,6 +147,7 @@ require('lazy').setup({
   require 'kickstart.plugins.neo-tree',
   require 'kickstart.plugins.telescope',
   require 'kickstart.plugins.todo-comments',
+  require 'kickstart.plugins.tokyonight',
   require 'kickstart.plugins.treesitter',
   require 'kickstart.plugins.vim-sleuth',
   require 'kickstart.plugins.which-key',
